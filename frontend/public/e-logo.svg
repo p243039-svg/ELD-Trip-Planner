@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b5bdb" />
+      <stop offset="100%" stop-color="#5b7df8" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <drop-shadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Background rounded card -->
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#grad)" filter="url(#shadow)" />
+  
+  <!-- Sleek bold letter E -->
+  <path d="M168 136 h176 a24 24 0 0 1 0 48 H216 v68 h112 a24 24 0 0 1 0 48 H216 v68 h136 a24 24 0 0 1 0 48 H168 a24 24 0 0 1 -24 -24 V160 a24 24 0 0 1 24 -24 z" fill="#ffffff" />
+</svg>

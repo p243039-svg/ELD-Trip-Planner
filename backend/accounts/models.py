@@ -1,0 +1,2 @@
+# accounts/models.py
+# Uses Django's built-in User model — no custom model needed.
