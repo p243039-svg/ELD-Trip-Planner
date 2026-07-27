@@ -1,4 +1,4 @@
-# 🚛 ELD Trip Planner
+ 🚛 ELD Trip Planner
 
 **HOS-Compliant Electronic Logging Device Trip Planner for Property-Carrying Interstate Truck Drivers**
 
