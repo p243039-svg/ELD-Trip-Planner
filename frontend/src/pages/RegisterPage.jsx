@@ -15,6 +15,10 @@ export default function RegisterPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (/\s/.test(form.username)) {
+      toast.error('Username cannot contain spaces (e.g. use driver1 or driver_1)')
+      return
+    }
     if (form.password !== form.password2) {
       toast.error('Passwords do not match')
       return
