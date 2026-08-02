@@ -27,10 +27,20 @@ export default function RegisterPage() {
     } catch (err) {
       const data = err.response?.data
       if (data) {
-        const msg = Object.values(data).flat().join(' ')
+        let msg = ''
+        if (typeof data === 'string') {
+          msg = data
+        } else if (typeof data === 'object') {
+          msg = Object.entries(data)
+            .map(([field, errors]) => {
+              const errStr = Array.isArray(errors) ? errors.join(' ') : String(errors)
+              return `${field !== 'detail' && field !== 'non_field_errors' ? field + ': ' : ''}${errStr}`
+            })
+            .join(' | ')
+        }
         toast.error(msg || 'Registration failed')
       } else {
-        toast.error('Registration failed. Please try again.')
+        toast.error('Registration failed. Please check network connection.')
       }
     } finally {
       setLoading(false)
